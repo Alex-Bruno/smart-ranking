@@ -26,6 +26,9 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## URL
+http://localhost:8010
+
 ## Installation
 
 ```bash
@@ -39,7 +42,7 @@ $ npm install
 $ npm run start
 
 # watch mode
-$ npm run start:dev -> Porta 8010
+$ npm run start:dev
 
 # production mode
 $ npm run start:prod
