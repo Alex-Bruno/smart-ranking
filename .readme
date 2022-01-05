@@ -2,4 +2,4 @@
 npm install uuid
 npm install @nestjs/mongoose mongoose
 npm install --save-dev @types/mongoose
-
+npm install class-validator class-transformer
