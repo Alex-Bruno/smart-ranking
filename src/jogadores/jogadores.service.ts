@@ -1,7 +1,6 @@
 import { Jogador } from './interfaces/jogador.interface';
 import { CriarJogadorDto } from './dtos/criar-jogador.dto';
 import { BadRequestException, Injectable, Logger, NotFoundException } from '@nestjs/common';
-import * as uuid from 'uuid';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { AtualizarJogadorDto } from './dtos/atualizar-jogador.dto';
