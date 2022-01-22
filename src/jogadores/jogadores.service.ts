@@ -27,8 +27,8 @@ export class JogadoresService {
 
         const jogadorEncontrado = await this.jogadorModel.findOne({ _id }).exec();
 
-        if(!jogadorEncontrado)
-        throw new NotFoundException(`Jogador com id ${_id} não encontrado`);
+        if (!jogadorEncontrado)
+            throw new NotFoundException(`Jogador com id ${_id} não encontrado`);
 
         await this.jogadorModel.findOneAndUpdate(
             { _id }, { $set: atualizarJogadorDto }

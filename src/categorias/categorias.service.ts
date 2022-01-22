@@ -1,3 +1,4 @@
+import { Jogador } from './../jogadores/interfaces/jogador.interface';
 import { JogadoresService } from './../jogadores/jogadores.service';
 import { AtualizarCategoriaDto } from './dtos/atualizar-categoria.dto';
 import { Categoria } from './interfaces/categoria.interface';
@@ -47,6 +48,11 @@ export class CategoriasService {
             throw new NotFoundException(`Categoria ${categoria} não encontrada`);
 
         return categoriaEncontrada;
+    }
+
+    async consultarCategoriaPeloJogador(jogador: Jogador): Promise<Categoria | any> {
+        const _id = (jogador._id) ? jogador._id: jogador;
+        return await this.categoriaModel.findOne().where('jogadores').in(_id).exec();
     }
 
     async atribuirCategoriaJogador(params: string[]): Promise<void> {
